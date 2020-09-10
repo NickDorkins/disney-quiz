@@ -13,3 +13,4 @@
 9/8/2020 - Domain Modeling Complete
          - Instructor approval to proceed
          - Character List Developed in Slack
+         ...
