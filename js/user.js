@@ -16,7 +16,8 @@ UserInput.prototype.addInput = function (person, food, drink) {
 };
 
 // Character constructor
-var Character = function (person, food, drink) {
+var Character = function (image, person, food, drink) {
+  this.imge = image;
   this.person = person;
   this.food = food;
   this.drink = drink;
