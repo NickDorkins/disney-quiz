@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Charm:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+
+
+/* These are the elements that are for all characters */
+
+* {
+  box-sizing: border-box;
+}
+
+.drink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drink>h1 {
+  font-family: 'Berkshire Swash', cursive;
+  color: white;
+  text-align: center;
+  order: 1;
+}
+
+.food {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+
+.food>h1 {
+  font-family: 'Berkshire Swash', cursive;
+  color: white;
+  text-align: center;
+  order: 1;
+}
+
+.funfact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.funfact>h1 {
+  font-family: 'Berkshire Swash', cursive;
+  color: white;
+  text-align: center;
+  order: 1;
+}
+
+.playAgain {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.playAgain>button {
+  background-color: darkblue;
+  height: 75px;
+  width: 125px;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+header {
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  border: solid 3px black;
+  padding: 0px;
+}
+
+footer {
+  position: relative;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  height: 75px;
+}
+
+/* Captain Hook styling */
+
+#captain-hook {
+  background-color: lightskyblue;
+  color: darkblue;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#captain-hook>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px purple;
+  height: 200px;
+}
+
+#captain-hook>h1 {
+  font-family: 'Berkshire Swash', cursive;
+  color: purple;
+  font-size: 50px;
+  text-align: center;
+}
+
+#captain-hook>img {
+  height: 600px;
+  float: left;
+}
+
+#captain-hook>.chardesc>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 30px;
+  color: darkblue;
+  border: solid 5px purple;
+  text-align: center;
+  float: right;
+  width: 300px;
+  padding: 60px;
+}
+
+.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+.drink>h2 {
+  order: 3;
+  color: red;
+  text-align: center;
+}
+
+.drink>a {
+  order: 4;
+  color: blue;
+  text-align: center;
+}
+
+.food>img {
+  height: 300px;
+  width: 400px;
+  order: 2;
+}
+
+.food>h2 {
+  order: 3;
+  color: red;
+  text-align: center;
+}
+
+.food>a {
+  order: 4;
+  color: blue;
+  text-align: center;
+}
+
+.funfact>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px purple;
+  text-align: center;
+  float: left;
+  width: 300px;
+  padding: 15px;
+  order: 2;
+}
+
+/* genie styling */
+
+#genie {
+  background-color: purple;
+  color: darkblue;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#genie>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#genie>h1 {
+  font-family: 'Aladin', cursive;
+  color: darkblue;
+  font-size: 80px;
+  text-align: center;
+}
+
+#genie>img {
+  height: 600px;
+  float: left;
+}
+
+#genie>.chardesc>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 30px;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  text-align: center;
+  float: right;
+  width: 300px;
+  padding: 60px;
+}
+
+#genie>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#genie>.drink>h2 {
+  order: 3;
+  color: red;
+  text-align: center;
+}
+
+#genie>.drink>a {
+  order: 4;
+  color: white;
+  text-align: center;
+}
+
+#genie>.food>img {
+  
+  order: 2;
+}
+
+#genie>.food>h2 {
+  order: 3;
+  color: red;
+  text-align: center;
+}
+
+#genie>.food>a {
+  order: 4;
+  color: white;
+  text-align: center;
+}
+
+#genie>.funfact>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px darkblue;
+  text-align: center;
+  float: left;
+  width: 300px;
+  padding: 15px;
+  order: 2;
+}
+
+/* alice styling */
+
+#alice {
+  background-color: rgb(229, 186, 216);
+  height:100%;
+  width:100%;
+  padding:0px;
+}
+
+#alice>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#alice>h1 {
+  font-family:'Cookie', cursive;
+  color: darkblue;
+  font-size: 50px;
+  text-align: center;
+}
+
+#alice>img {
+  height: 400px;
+  float: left;
+}
+
+#alice>.chardesc>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 30px;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#alice>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#alice>.drink>h2 {
+  order: 3;
+  color:darkgreen;
+  text-align: center;
+}
+
+#alice>.drink>a {
+  order: 4;
+  color: white;
+  text-align: center;
+}
+
+#alice>.food>img {
+  height:300px;
+  width: 350px;
+  order: 2;
+}
+
+#alice>.food>h2 {
+  order: 3;
+  color:darkgreen;
+  text-align: center;
+}
+
+#alice>.food>a {
+  order: 4;
+  color: black;
+  text-align: center;
+}
+
+#alice>.funfact>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px darkblue;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
+/* Ursula styling */
+
+#ursula {
+  background-color: darkgreen;
+  color: darkblue;
+  height: 100vw;
+  padding:0px;
+}
+
+/* #ursula>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+} */
+
+#ursula>h1 {
+  font-family:'Charm', cursive;
+  color: darkblue;
+  font-size: 50px;
+  text-align: center;
+  display:inline-block;
+}
+
+#ursula>img {
+  height: 400px;
+  float: left;
+}
+
+#ursula>.chardesc>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 30px;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#ursula>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#ursula>.drink>h2 {
+  order: 3;
+  color:purple;
+  text-align: center;
+}
+
+#ursula>.drink>a {
+  order: 4;
+  color: white;
+  text-align: center;
+}
+
+#ursula>.food>img {
+  height:300px;
+  width: 350px;
+  order: 2;
+}
+
+#ursula>.food>h2 {
+  order: 3;
+  color: purple;
+  text-align: center;
+}
+
+#ursula>.food>a {
+  order: 4;
+  color: black;
+  text-align: center;
+}
+
+#ursula>.funfact>article {
+  background-color: white;
+  font-family: 'Cookie', cursive;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px darkblue;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
+/* Baymax Styling */
+
+#baymax {
+  background-color: red;
+  height:100%;
+  width:100%;
+  padding:0px;
+}
+
+#baymax>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#baymax>h1 {
+  font-family:'Bungee', cursive;
+  color: darkblue;
+  font-size: 50px;
+  text-align: center;
+}
+
+#baymax>img {
+  height: 400px;
+  float: left;
+}
+
+#baymax>.chardesc>article {
+  background-color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  color: darkblue;
+  border: solid 5px black;
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#baymax>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#baymax>.drink>h2 {
+  order: 3;
+  color:white;
+  text-align: center;
+}
+
+#baymax>.drink>a {
+  order: 4;
+  color:black;
+  text-align: center;
+}
+
+#baymax>.food>img {
+   order: 2;
+}
+
+#baymax>.food>h2 {
+  order: 3;
+  color: white;
+  text-align: center;
+}
+
+#baymax>.food>a {
+  order: 4;
+  color: black;
+  text-align: center;
+}
+
+#baymax>.funfact>article {
+  background-color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px black;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
+/* Leia styling */
+
+#princess-leia {
+  background-color: bisque;
+  height:100%;
+  width:100%;
+  padding:0px;
+}
+
+#princess-leia>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#princess-leia>h1 {
+  font-family:'Bungee', cursive;
+  color: darkslateblue;
+  font-size: 50px;
+  text-align: center;
+}
+
+#princess-leia>img {
+  height: 600px;
+  float: left;
+}
+
+#princess-leia>.chardesc>article {
+  background-color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  color: darkblue;
+  border: solid 5px darkslateblue;
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#princess-leia>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#princess-leia>.drink>h2 {
+  order: 3;
+  color:red;
+  text-align: center;
+}
+
+#princess-leia>.drink>a {
+  order: 4;
+  color: blue;
+  text-align: center;
+}
+
+#princess-leia>.food>img {
+   order: 2;
+}
+
+#princess-leia>.food>h2 {
+  order: 3;
+  color: red;
+  text-align: center;
+}
+
+#princess-leia>.food>a {
+  order: 4;
+  color: blue;
+  text-align: center;
+}
+
+#princess-leia>.funfact>article {
+  background-color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px darkslateblue;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
+/* bobafett styling */
+
+#boba-fett {
+  background-color: rgb(235, 191, 126);
+  height:100%;
+  width:100%;
+  padding:0px;
+}
+
+#boba-fett>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#boba-fett>h1 {
+  font-family:'Bungee', cursive;
+  color: darkolivegreen;
+  font-size: 50px;
+  text-align: center;
+}
+
+#boba-fett>img {
+  height: 600px;
+  float: left;
+}
+
+#boba-fett>.chardesc>article {
+  background-color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  color:darkblue;
+  border: solid 5px darkolivegreen;
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#boba-fett>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#boba-fett>.drink>h2 {
+  order: 3;
+  color:darkslategrey;
+  text-align: center;
+}
+
+#boba-fett>.drink>a {
+  order: 4;
+  color: blue;
+  text-align: center;
+}
+
+#boba-fett>.food>img {
+   order: 2;
+}
+
+#boba-fett>.food>h2 {
+  order: 3;
+  color: darkslategrey;
+  text-align: center;
+}
+
+#boba-fett>.food>a {
+  order: 4;
+  color: blue;
+  text-align: center;
+}
+
+#boba-fett>.funfact>article {
+  background-color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px darkolivegreen;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
+/* Hades styling */
+
+#hades {
+  background-color: rgb(42, 47, 117);
+  height:100%;
+  width:100%;
+  padding:0px;
+}
+
+#hades>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#hades>h1 {
+  font-family:'Rakkas', cursive;
+  color:lightskyblue;
+  font-size: 50px;
+  text-align: center;
+}
+
+#hades>img {
+  height: 600px;
+  float: left;
+}
+
+#hades>.chardesc>article {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  color:darkblue;
+  border: solid 5px darkorchid;
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#hades>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#hades>.drink>h2 {
+  order: 3;
+  color: darkorchid;
+  text-align: center;
+}
+
+#hades>.drink>a {
+  order: 4;
+  color: whitesmoke;
+  text-align: center;
+}
+
+#hades>.food>img {
+   order: 2;
+}
+
+#hades>.food>h2 {
+  order: 3;
+  color: darkorchid;
+  text-align: center;
+}
+
+#hades>.food>a {
+  order: 4;
+  color: whitesmoke;
+  text-align: center;
+}
+
+#hades>.funfact>article {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px darkorchid;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
+/* maleficent styling */
+#maleficent {
+  background-color: rgb(42, 47, 117);
+  height:100%;
+  width:100%;
+  padding:0px;
+}
+
+#maleficent>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#maleficent>h1 {
+  font-family:'Rakkas', cursive;
+  color:lightskyblue;
+  font-size: 50px;
+  text-align: center;
+}
+
+#maleficent>img {
+  height: 600px;
+  float: left;
+}
+
+#maleficent>.chardesc>article {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  color:darkblue;
+  border: solid 5px darkorchid;
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#maleficent>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#maleficent>.drink>h2 {
+  order: 3;
+  color: darkorchid;
+  text-align: center;
+}
+
+#hades>.drink>a {
+  order: 4;
+  color: whitesmoke;
+  text-align: center;
+}
+
+#hades>.food>img {
+   order: 2;
+}
+
+#hades>.food>h2 {
+  order: 3;
+  color: darkorchid;
+  text-align: center;
+}
+
+#hades>.food>a {
+  order: 4;
+  color: whitesmoke;
+  text-align: center;
+}
+
+#hades>.funfact>article {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px darkorchid;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
