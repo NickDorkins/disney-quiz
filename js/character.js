@@ -1,4 +1,5 @@
 // Character constructor
+var characterArray = [];
 var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact, value) {
   this.characterName = characterName;
   this.id = id;
@@ -16,7 +17,6 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
 };
 
 //this is whrere we need to put all Character object as well as thier propreties
-var characterArray = [];
 new Character(
   'Captain Hook',
   'captain-hook',
@@ -155,7 +155,6 @@ new Character(
   'https://www.inliterature.net/food-in-literature/drinks/alcoholic/2012/05/snow-white-cocktail.html',
   'Snow White has her own star on the Hollywood Walk of Fame'
 );
-
 
 
 
