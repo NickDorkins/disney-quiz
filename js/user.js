@@ -11,25 +11,76 @@ var UserInput = function (name, age) {
 };
 
 // this instance method will add the propreties of the Character constructor to the array input.
-UserInput.prototype.addInput = function (person, food, drink) {
-  input.push(new Character(person, food, drink));
+UserInput.prototype.addInput = function (image, personInfo, food, drink, funFact) {
+  input.push(new Character(image, personInfo, food, drink, funFact));
 };
-
-// Character constructor
-var Character = function (image, person, food, drink) {
-  this.imge = image;
-  this.person = person;
-  this.food = food;
-  this.drink = drink;
-};
-
-UserInput.prototype.saveToLocalStorage = function(){
+UserInput.prototype.saveToLocalStorage = function () {
   // this instance method will save all the user info to the local storage
 
 };
 
+// Character constructor
+var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact, value) {
+  this.characterName = characterName;
+  this.id = id;
+  this.characterImage = characterImage;
+  this.foodImage = foodImage;
+  this.drinkImage = drinkImage;
+  this.drinkName = drinkName;
+  this.foodName = foodName;
+  this.description = description;
+  this.foodLink = foodLink;
+  this.drinkLink = drinkLink;
+  this.funFact = funFact;
+  this.value = value;
+};
 
-function handleSubmit(event){
+//this is whrere we need to put all Character object as well as thier propreties
+var characterArray = [];
+
+// function that will render the Character to the page
+function renderCharacter() {
+  for (var i = 0; i < characterArray.lenght; i++) {
+    var characterEl = document.getElementById(characterArray[i].id);
+    var characterH1 = document.createElement('h1');
+    characterH1.textContent = characterArray[i].characterName;
+    characterEl.appendChild(characterH1);
+    var characterImg = document.createElement('img');
+    characterImg.src = characterArray[i].characterImage;
+    characterEl.appendChild(characterImg);
+    var characterArticle = document.createElement('article');
+    characterArticle.textContent = characterArray[i].description;
+    characterEl.appendChild(characterArticle);
+    var characterDrinkEl = document.createElement('h1');
+    characterDrinkEl.textContent = characterArray[i].drinkName;
+    characterEl.appendChild(characterDrinkEl);
+    var characterDrinkImg = document.createElement('img');
+    characterDrinkImg.src = characterArray[i].drinkImage;
+    characterEl.appendChild(characterDrinkImg);
+    var characterDrinkLink = document.createElement('a');
+    characterDrinkLink.href = characterArray[i].drinkLink;
+    characterEl.appendChild(characterDrinkLink);
+    var characterFoodEl = document.createElement('h1');
+    characterFoodEl.textContent = characterArray[i].FoodName;
+    characterEl.appendChild(characterFoodEl);
+    var characterFoodImg = document.createElement('img');
+    characterFoodImg.src = characterArray[i].foodImage;
+    characterEl.appendChild(characterFoodImg);
+    var characterFoodLink = document.createElement('a');
+    characterFoodLink.href = characterArray[i].foodLink;
+    characterEl.appendChild(characterFoodLink);
+    var title = document.createElement('h1');
+    title.textContent = 'Fun Fact';
+    characterEl.appendChild(title);
+    var funFcatEl = document.createElement('article');
+    funFcatEl.textContent = characterArray[i].funFact;
+    characterEl.appendChild(funFcatEl);
+  }
+}
+
+
+
+function handleSubmit(event) {
   // prevent the page from reloading
   event.preventDefault();
   // adding all the info enter by the user
@@ -49,20 +100,12 @@ function getUserInfo() {
   var userName = userNameEl.value;
   // generate the user input
   var car = new UserInput(userName, response);
-  console .log (car);
+  console.log(car);
 
 }
 
-
+// this event handeler will make sure that all the user info is being push into the array.
 var unserinputFom = document.getElementById('userInput');
 unserinputFom.addEventListener('submit', handleSubmit);
-
-
-
-
-
-
-
-
 
 
