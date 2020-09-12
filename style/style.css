@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Charm:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
 
 
@@ -843,34 +844,121 @@ footer {
   text-align: center;
 }
 
-#hades>.drink>a {
+#maleficent>.drink>a {
   order: 4;
   color: whitesmoke;
   text-align: center;
 }
 
-#hades>.food>img {
+#maleficent>.food>img {
    order: 2;
 }
 
-#hades>.food>h2 {
+#maleficent>.food>h2 {
   order: 3;
   color: darkorchid;
   text-align: center;
 }
 
-#hades>.food>a {
+#maleficent>.food>a {
   order: 4;
   color: whitesmoke;
   text-align: center;
 }
 
-#hades>.funfact>article {
+#maleficent>.funfact>article {
   background-color: white;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 50px;
   color: darkblue;
   border: solid 5px darkorchid;
+  text-align: center;
+  float: left;
+  width: 200px;
+  padding: 0px;
+  order: 2;
+}
+
+/* snow white styling */
+
+#snow-white {
+  background-color: rgb(230, 119, 119);
+  height:100%;
+  width:100%;
+  padding:0px;
+}
+
+#snow-white>header {
+  background-color: white;
+  color: darkblue;
+  border: solid 5px rgb(71, 6, 248);
+  height: 200px;
+}
+
+#snow-white>h1 {
+  font-family:'Playfair Display', serif;
+  color:white;
+  font-size: 50px;
+  text-align: center;
+}
+
+#snow-white>img {
+  height: 600px;
+  float: left;
+}
+
+#snow-white>.chardesc>article {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  color:darkblue;
+  border: solid 5px blue;
+  text-align: center;
+  float: right;
+  width: 200px;
+  padding: 0px;
+}
+
+#snow-white>.drink>img {
+  height: 300px;
+  width: 300px;
+  order: 2;
+}
+
+#snow-white>.drink>h2 {
+  order: 3;
+  color: white;
+  text-align: center;
+}
+
+#snow-white>.drink>a {
+  order: 4;
+  color: yellow;
+  text-align: center;
+}
+
+#snow-white>.food>img {
+   order: 2;
+}
+
+#snow-white>.food>h2 {
+  order: 3;
+  color: white;
+  text-align: center;
+}
+
+#snow-white>.food>a {
+  order: 4;
+  color: yellow;
+  text-align: center;
+}
+
+#snow-white>.funfact>article {
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  color: darkblue;
+  border: solid 5px blue;
   text-align: center;
   float: left;
   width: 200px;
