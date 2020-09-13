@@ -43,7 +43,7 @@ function renderQuiz() {
     var questionEl = document.getElementById(quiz[i].idQuestion);
     questionEl.textContent = quiz[i].question;
     for (var j = 0; j < quiz[i].answerArray.length; j++) {
-      quiz[i].selectedAnswer ++;
+      quiz[i].selectedAnswer++;
       var answerEl = document.createElement('option');
       answerEl.textContent = quiz[i].answerArray[j].answer;
       buttomEl.appendChild(answerEl);
@@ -60,25 +60,33 @@ function processAnswer() {
   }
 }
 
+// We need to store the answers for the selected answer
+function addSelectedAnswer() {
+  for (var i = 0; i < quiz.length; i++) {
+    var selectElement = document.getElementById(quiz[i].idAnswer);
+    var answerValue = selectElement.value;
+    console.log(answerValue);
+    for (var j = 0; j < quiz[i].answerArray.length; j++) {
+      var a = quiz[i].answerArray[j].answer;
+      if (answerValue === a) {
+        count += quiz[i].answerArray[j].point;
+      }
+    }
+    console.log(count);
+    // var text = quiz[i].answerArray.point;
+    // count += parseInt(text, 10);
+    // console.log(count);
+  }
+}
+
+// Creating a function for the submit button
+function handleSubmit(event) {
+  event.preventDefault();
+  addSelectedAnswer();
+
+}
+
+// Create event listener to submit quiz answers
+var submitQuiz = document.getElementById('submit');
+submitQuiz.addEventListener('submit', handleSubmit);
 renderQuiz();
-
-
-// for(var i = 0 ; i < quiz.length; i++){
-  //   count += quiz.QA.answerArray[this.selectedAnswer].this.point;
-  // }
-  // quiz[currentQuestionIdx]
-
-function Quiz(questions) {
-  this.score = 0;
-  this.questios = questions;
-  this.questionIndex = 0;
-}
-
-function Question(text, choices) {
-  this.text = text;
-  this.choices = choices;
-}
-
-function showQuestion() {
-var element = document.getElementById('question');
-}
