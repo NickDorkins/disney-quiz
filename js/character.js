@@ -156,6 +156,20 @@ new Character(
   'Snow White has her own star on the Hollywood Walk of Fame'
 );
 
+new Character(
+  'Pinnocchio',
+  'pinnocchio',
+  'img/char/pinnocchio.png',
+  'img/food/spaghetti.jpg',
+  'img/drink/greengrasshopper',
+  'Perfect Spaghetti and Meatballs',
+  'Jiminys Conscience',
+  'You are whimsical and maybe a little impressionable. You have a mischevious nature and might be considered to be  over-trusting and sometimes end up in trouble. But, you want to be better and try really hard to do the right thing most of the time. You are known for your Big Fish stories.',
+  'https://smittenkitchen.com/2019/03/perfect-meatballs-and-spaghetti/',
+  'http://yohodisney.com/jiminys-conscience-a-disney-inspired-cocktail/',
+  'When you lie the temperature in your nose actually rises.'
+);
+
 
 
 

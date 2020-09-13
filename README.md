@@ -14,3 +14,9 @@
          - Instructor approval to proceed
          - Character List Developed in Slack
          ...
+
+9/12/2020 - Created structure for the quiz
+          - Created event listeners for the submit button
+          - Created a point system 
+          - Populated character constructors
+          
