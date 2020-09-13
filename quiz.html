@@ -5,21 +5,15 @@
   <title>Document</title>
   <link rel="stylesheet" href="style/reset.css"/>
   <link rel="stylesheet" href="style/style.css"/>
-</head>
-<body>
-  <main>
-
-  </main>
-
-  
+</head>  
   
   <header>
     <h1>About You</h1>
     
     <nav>
       <ul>
-        <li>Home</li>
-        <li>About Us</li>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='#'>About Us</a></li>
       </ul>
     </nav>
     
@@ -27,23 +21,28 @@
   
   <body>
     <header>
-      <h1>Welcome to the Disney QUiz</h1>
+      <h1>Welcome to the Disney Quiz</h1>
     </header>
     <main>
-      <p id="question1"></p>
-      <select id="answer1"></select>
-
-      <p id="question2"></p>
-      <select id="answer2"></select>
+      <form id='submit'>
+        <p id="question1"></p>
+        <select id="answer1"></select>
+        
+        <p id="question2"></p>
+        <select id="answer2"></select>
+        
+        <p id="question3"></p>
+        <select id="answer3"></select>
+        
+        <p id="question4"></p>
+        <select id="answer4"></select>
+        
+        <p id="question5"></p>
+        <select id="answer5"></select>
+        
+        <input type='submit' value='Happily Ever After'>
+      </form>
       
-      <p id="question3"></p>
-      <select id="answer3"></select>
-
-      <p id="question4"></p>
-      <select id="answer4"></select>
-
-      <p id="question5"></p>
-      <select id="answer5"></select>
     </main>
     <script src="js/user.js"></script>
     <script src="js/quiz.js"></script>
