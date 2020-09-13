@@ -72,9 +72,9 @@ function renderCharacter() {
     var title = document.createElement('h1');
     title.textContent = 'Fun Fact';
     characterEl.appendChild(title);
-    var funFcatEl = document.createElement('article');
-    funFcatEl.textContent = characterArray[i].funFact;
-    characterEl.appendChild(funFcatEl);
+    var funFactEl = document.createElement('article');
+    funFactEl.textContent = characterArray[i].funFact;
+    characterEl.appendChild(funFactEl);
   }
 }
 
