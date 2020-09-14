@@ -2,28 +2,29 @@
 
 <html lang="en">
 <head>
-  <title>Document</title>
+  <title>Disney Quiz Page</title>
   <link rel="stylesheet" href="style/reset.css"/>
   <link rel="stylesheet" href="style/style.css"/>
 </head>  
-  
-  <header>
-    <h1>About You</h1>
+  <body>
+    <div id="pagequiz-container">
+      <div id="pagequiz-wrap">
+       
+    <header>
+      <h1>Welcome to the Disney Quiz</h1>
+      
     
     <nav>
       <ul>
         <li><a href='index.html'>Home</a></li>
-        <li><a href='#'>About Us</a></li>
+        <!-- <li><a href='#' id="link2">About Us</a></li> -->
       </ul>
     </nav>
-    
   </header>
-  
-  <body>
-    <header>
-      <h1>Welcome to the Disney Quiz</h1>
-    </header>
-    <main>
+
+<center>
+    <main class="disquiz">
+
       <form id='submit'>
         <p id="question1"></p>
         <select id="answer1"></select>
@@ -39,11 +40,18 @@
         
         <p id="question5"></p>
         <select id="answer5"></select>
-        
+        <br>
         <input type='submit' value='Happily Ever After'>
       </form>
       
     </main>
+  </center>
+  </div>
+  
+  <footer id="footer">
+  
+  </footer>
+  </div>
     <script src="js/user.js"></script>
     <script src="js/quiz.js"></script>
   </body>

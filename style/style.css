@@ -1,11 +1,58 @@
-.cheshirecat {
-  float: right;
-  
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+
+body {
+  background-color: darkblue;
+}
+#page-container {
+  position:relative;
+  min-height: 100vh;
+}
+
+#page-wrap {
+  padding-bottom: 125px;
+}
+header {
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  border: solid 3px black;
+  padding: 0px;
+}
+
+header>nav>ul>li>a {
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 0px;
+  font-size: 20px;
+  color: red;
+  padding:0px;
 
 }
 
-.cheshirecat>img {
-  -webkit-animation: fade 3s alternate infinite;
+
+
+header>h1 {
+  color:red;
+  font-family:'Fondamento', cursive; 
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.whoareyou {
+  display: flex-box;
+  flex-direction: column;
+  float: left;
+
+}
+
+.whoareyou>img {
+  height: 175px;
+  width: 175px;
+}
+
+.whoareyou>img {
+  -webkit-animation: fade 10s alternate infinite;
   animation: fade 3s alternate infinite;
   display: block;
 }
@@ -14,17 +61,75 @@
   0% {
     opacity: 1;
   }
-
   100% {
-    opacity:0;
+    opacity: 0;
   }
 }
 
 @keyframes fade {
-  0%{
+  0% {
     opacity: 1;
   }
   100% {
     opacity: 0;
   }
+}
+
+.caterpiller {
+  float: left;
+}
+
+.usersignup {
+  float: right;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  color:white;
+  padding:0px;
+ display: inline-block;
+}
+
+/* .intro {
+  display: flex;
+  flex-direction: column;
+ align-items:center;
+} */
+.intro>p {
+background-color: white;
+border: solid 3px red;
+font-family: cursive;
+color: darkslateblue;
+font-size: 21px;
+float:right;
+margin-top:200px;
+margin-right: -400px;
+width: 300px;
+padding: 20px;
+
+
+order: 1;
+}
+
+.intro>a>img {
+ margin-top: 175px;
+ margin-left: 500px;
+ padding:0px;
+ order: 2;
+
+
+}
+
+.disquiz {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 25px;
+  
+}
+
+#footer {
+  position: fixed;
+  background-color: darkgreen;
+  height: 75px;
+  width: 100%;
+  bottom: 0;
+  
 }
