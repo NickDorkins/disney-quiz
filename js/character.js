@@ -1,4 +1,5 @@
 // Character constructor
+var characterArray = [];
 var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact, value) {
   this.characterName = characterName;
   this.id = id;
@@ -16,7 +17,6 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
 };
 
 //this is whrere we need to put all Character object as well as thier propreties
-var characterArray = [];
 new Character(
   'Captain Hook',
   'captain-hook',
@@ -169,7 +169,6 @@ new Character(
   'http://yohodisney.com/jiminys-conscience-a-disney-inspired-cocktail/',
   'When you lie the temperature in your nose actually rises.'
 );
-
 
 
 
