@@ -125,6 +125,12 @@ order: 1;
   
 }
 
+#mickey>img {
+  height: 300px;
+  margin-left: 500px;
+
+}
+
 #footer {
   position: fixed;
   background-color: darkgreen;

@@ -41,7 +41,7 @@ var characterArray = [];
 
 // function that will render the Character to the page
 function renderCharacter() {
-  for (var i = 0; i < characterArray.lenght; i++) {
+  for (var i = 0; i < characterArray.length; i++) {
     var characterEl = document.getElementById(characterArray[i].id);
     var characterH1 = document.createElement('h1');
     characterH1.textContent = characterArray[i].characterName;
