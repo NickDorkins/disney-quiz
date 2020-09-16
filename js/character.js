@@ -28,7 +28,7 @@ new Character(
   'You are intellegent and charming. You know what you want and will do anything to get it. Luxery is a necessity. Its important to you that people respect you',
   'https://www.thriftyfoods.com/recipes/recipes/crocodile-gumbo-with-chorizo-prawns-and-beer',
   'http://www.barnotes.co/recipes/crazed-captain-hook',
-  'Captain Hook can play the piano even though he has a hook for a hand'
+  'Captain Hook can play the piano even though he has a hook for a hand.'
 );
 new Character(
   'You are...Alice',
