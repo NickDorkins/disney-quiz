@@ -45,7 +45,7 @@ new Character(
 );
 
 new Character(
-  'You are...Hades',
+  'You are....Hades',
   'hades',
   'img/char/hades.png',
   'img/food/greekhero.jpg',

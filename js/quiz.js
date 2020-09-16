@@ -31,11 +31,51 @@ var Answer = function (answer, point) {
 };
 
 // This is where we create our questions
-new QA('what is your age ?', [new Answer('I\'m 24', 1), new Answer('I won\'t give you my age', 2), new Answer('I\'m 30', 3), new Answer('I\'m 40', 4)], 'question1', 'answer1');
-new QA('egg sandwich', [new Answer('1', 1), new Answer('2', 2), new Answer('3', 3), new Answer('4', 4)], 'question2', 'answer2');
-new QA('soup', [new Answer('1', 1), new Answer('2', 2), new Answer('3', 3), new Answer('4', 4)], 'question3', 'answer3');
-new QA('tea', [new Answer('1', 1), new Answer('2', 2), new Answer('3', 3), new Answer('4', 4)], 'question4', 'answer4');
-new QA('yogurt', [new Answer('1', 1), new Answer('2', 2), new Answer('3', 3), new Answer('4', 4)], 'question5', 'answer5');
+new QA(
+  'what is your age ?',
+  [new Answer('I\'m 24', 1),
+    new Answer('I won\'t give you my age', 2),
+    new Answer('I\'m 30', 3),
+    new Answer('I\'m 40', 4),
+    new Answer('5', 5)],
+  'question1',
+  'answer1');
+new QA(
+  'egg sandwich',
+  [new Answer('1', 1),
+    new Answer('2', 2),
+    new Answer('3', 3),
+    new Answer('4', 4),
+    new Answer('5', 5)],
+  'question2',
+  'answer2');
+new QA(
+  'soup',
+  [new Answer('1', 1),
+    new Answer('2', 2),
+    new Answer('3', 3),
+    new Answer('4', 4),
+    new Answer('5', 5)],
+  'question3',
+  'answer3');
+new QA(
+  'tea',
+  [new Answer('1', 1),
+    new Answer('2', 2),
+    new Answer('3', 3),
+    new Answer('4', 4),
+    new Answer('5', 5)],
+  'question4',
+  'answer4');
+new QA(
+  'yogurt',
+  [new Answer('1', 1),
+    new Answer('2', 2),
+    new Answer('3', 3),
+    new Answer('4', 4),
+    new Answer('5', 5)],
+  'question5',
+  'answer5');
 
 function renderQuiz() {
   for (var i = 0; i < quiz.length; i++) {
