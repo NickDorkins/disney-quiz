@@ -47,9 +47,9 @@ new Character(
   'captain-hook',
   'img/char/capthook.png',
   'img/food/crocgumbo.jpg',
-  'img/drink/crazycaptain.jpg',
-  'Crocodile Gumbo',
+  'img/drink/crazedcaptain.jpg',
   'Crazed Captain',
+  'Crocodile Gumbo',
   'You are intellegent and charming. You know what you want, and will do anything to get it. Luxery is a necessity. Its important to you that people respect you',
   'https://www.thriftyfoods.com/recipes/recipes/crocodile-gumbo-with-chorizo-prawns-and-beer',
   'http://www.barnotes.co/recipes/crazed-captain-hook',
@@ -203,46 +203,129 @@ new Character(
 
 
 // function that will render the Character to the page
-function renderCharacter() {
+// characterId will find the index in the array that the character lives in
+// example:; captain-hook is index 0
+function renderCharacter(characterId) {
+
+  // keep track of the index of the character chosen
+  // -1 because -1 is not a possible index of an array, so it sets a default value
+  var characterIndex = -1;
+
+  // going through the array and 
   for (var i = 0; i < characterArray.length; i++) {
-    var characterEl = document.getElementById(characterArray[i].id);
+    // seeing if the id of the character obj in the array is equal to the id that the function is accepting.
+    if (characterArray[i].id === characterId) {
+      characterIndex = i;
+      // once we found it, we are done with the loop
+      break;
+    }
+  }
+
+  // guarantees we are always working with a valid index in the array/valid character
+  if (characterIndex >= 0) {
+
+    var mainCharacter = document.getElementById('id');
+    var characterEl = document.createElement('div');
+
+    var h1Name = document.createElement('div');
+    characterEl.id = characterArray[characterIndex].id;
+    // populate the character name onto the main id
     var characterH1 = document.createElement('h1');
-    characterH1.textContent = characterArray[i].characterName;
-    characterEl.appendChild(characterH1);
+    characterH1.textContent = characterArray[characterIndex].characterName;
+    h1Name.appendChild(characterH1);
+    characterEl.appendChild(h1Name);
+
+
+    var imgDiv = document.createElement('div');
     var characterImg = document.createElement('img');
-    characterImg.src = characterArray[i].characterImage;
-    characterEl.appendChild(characterImg);
-    var characterArticle = document.createElement('article');
-    characterArticle.textContent = characterArray[i].description;
-    characterEl.appendChild(characterArticle);
-    var characterDrinkEl = document.createElement('h1');
-    characterDrinkEl.textContent = characterArray[i].drinkName;
-    characterEl.appendChild(characterDrinkEl);
+    characterImg.src = characterArray[characterIndex].characterImage;
+    imgDiv.appendChild(characterImg);
+    characterEl.appendChild(imgDiv);
+
+
+    var drinkDivs = document.createElement('div');
+
+    var spanText = document.createElement('span');
+    spanText.textContent = 'Suggested Drink';
+
+    drinkDivs.appendChild(spanText);
+
     var characterDrinkImg = document.createElement('img');
-    characterDrinkImg.src = characterArray[i].drinkImage;
-    characterEl.appendChild(characterDrinkImg);
+    characterDrinkImg.src = characterArray[characterIndex].drinkImage;
+
+    drinkDivs.appendChild(characterDrinkImg);
+
+
+    var drinkNameP = document.createElement('p');
+    drinkNameP.textContent = characterArray[characterIndex].drinkName;
+
+
     var characterDrinkLink = document.createElement('a');
-    characterDrinkLink.href = characterArray[i].drinkLink;
-    characterEl.appendChild(characterDrinkLink);
-    var characterFoodEl = document.createElement('h1');
-    characterFoodEl.textContent = characterArray[i].FoodName;
-    characterEl.appendChild(characterFoodEl);
+    characterDrinkLink.href = characterArray[characterIndex].drinkLink;
+    characterDrinkLink.appendChild(drinkNameP);
+
+
+    drinkDivs.appendChild(characterDrinkLink);
+
+    characterEl.appendChild(drinkDivs);
+
+
+
+
+    var descDiv = document.createElement('div');
+    var characterArticle = document.createElement('article');
+    characterArticle.textContent = characterArray[characterIndex].description;
+    descDiv.appendChild(characterArticle);
+    characterEl.appendChild(descDiv);
+
+
+
+    var foodDiv = document.createElement('div');
+
+    var foodSpan = document.createElement('p');
+    foodSpan.textContent = 'Suggested Food';
+    foodDiv.appendChild(foodSpan);
+
     var characterFoodImg = document.createElement('img');
-    characterFoodImg.src = characterArray[i].foodImage;
-    characterEl.appendChild(characterFoodImg);
+    characterFoodImg.src = characterArray[characterIndex].foodImage;
+
+    foodDiv.appendChild(characterFoodImg);
+
+    var foodNameP = document.createElement('p');
+    foodNameP.textContent = characterArray[characterIndex].foodName;
+
     var characterFoodLink = document.createElement('a');
-    characterFoodLink.href = characterArray[i].foodLink;
-    characterEl.appendChild(characterFoodLink);
-    var title = document.createElement('h1');
-    title.textContent = 'Fun Fact';
-    characterEl.appendChild(title);
-    var funFactEl = document.createElement('article');
-    funFactEl.textContent = characterArray[i].funFact;
-    characterEl.appendChild(funFactEl);
+    characterFoodLink.href = characterArray[characterIndex].foodLink;
+    characterFoodLink.appendChild(foodNameP);
+    foodDiv.appendChild(characterFoodLink);
+    characterEl.appendChild(foodDiv);
+
+
+    var funDiv = document.createElement('div');
+    var funPara = document.createElement('p');
+    funPara.textContent = 'Fun Fact';
+    funDiv.appendChild(funPara);
+
+
+    var funFact = document.createElement('span');
+    funFact.textContent = characterArray[characterIndex].funFact;
+    funDiv.appendChild(funFact);
+
+    characterEl.appendChild(funDiv);
+
+    mainCharacter.appendChild(characterEl);
+
+  }else {
+    // do some sort of You don't have a character probably a a stretch goal though
   }
 }
 
+//this calls the function
 
+// after you calcuate the score, 
+// determine who the character is
+// call this function with the characterId as the argument
+renderCharacter('captain-hook');
 
 function handleSubmit(event) {
   // prevent the page from reloading

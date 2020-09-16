@@ -245,6 +245,14 @@ header>h1 {
  margin: 10px;
 }
 
+#captain-hook>h1 {
+  font-size: 25px;
+ font-family: 'Berkshire Swash', cursive;
+ color: darkblue;
+ text-align: center;
+
+}
+
 /* Genie */
 
 * #ursula {
