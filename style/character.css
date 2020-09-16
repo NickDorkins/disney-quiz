@@ -44,7 +44,7 @@ header>h1 {
   font-size: 50px;
   color:red;
   text-align:center;
-  margin-top: 5px;
+  margin-top: 20px;
 
 
 }
@@ -446,15 +446,15 @@ header>h1 {
  font-size: 20px;
  justify-self: center;
  border: solid 3px black;
- font-family:'Charm', cursive;
+ font-family:'Bungee', cursive;
 }
 
 /* name */
 #baymax>div:nth-child(1) {
  grid-column: span 4;
  justify-items: center;
- font-size: 25px;
- font-family:'Charm', cursive;
+ font-size: 45px;
+ font-family:'Bungee', cursive;
 
  
 }
@@ -507,6 +507,7 @@ header>h1 {
  padding: 0px;
  margin: 10px;
 }
+
 /* boba-fett */
 * #boba-fett {
   background-color:darkolivegreen;
@@ -538,7 +539,8 @@ header>h1 {
 #boba-fett>div:nth-child(1) {
  grid-column: span 4;
  justify-items: center;
- font-size: 25px;
+ margin-top:10px;
+ font-size: 40px;
  font-family:'Bungee', cursive;
 
  
@@ -595,7 +597,7 @@ header>h1 {
 
 /* hades */
 * #hades {
-  background-color:darkviolet;
+  background-color: black;
   
 }
 
@@ -624,7 +626,7 @@ header>h1 {
 #hades>div:nth-child(1) {
  grid-column: span 4;
  justify-items: center;
- font-size: 25px;
+ font-size: 40px;
  font-family:'Rakkas', cursive;
 
  
@@ -710,7 +712,7 @@ header>h1 {
 #maleficent>div:nth-child(1) {
  grid-column: span 4;
  justify-items: center;
- font-size: 25px;
+ font-size: 40px;
  font-family:'Rakkas', cursive;
 
  
@@ -720,6 +722,7 @@ header>h1 {
  grid-row: span 1;
  justify-content: center;
  align-items: center;
+ padding-top: 80px;
  
  
  
@@ -797,7 +800,7 @@ font-family:'Rakkas', cursive;
 #snow-white>div:nth-child(1) {
  grid-column: span 4;
  justify-items: center;
- font-size: 25px;
+ font-size: 40px;
  font-family:'Playfair Display', cursive;
 
  
@@ -854,7 +857,7 @@ font-family:'Playfair Display', cursive;
 
 
 /* pinnocchio */
-* #snow-white {
+* #pinnocchio {
   background-color:darkblue;
   
 }
@@ -881,25 +884,25 @@ font-family:'Playfair Display', cursive;
 }
 
 /* name */
-#snow-white>div:nth-child(1) {
+#pinnocchio>div:nth-child(1) {
  grid-column: span 4;
  justify-items: center;
- font-size: 25px;
+ font-size: 40px;
  font-family:'Black Han Sans', sans-serif;
 
  
 }
 /* image */
-#snow-white>div:nth-child(2) {
+#pinnocchio>div:nth-child(2) {
  grid-row: span 1;
  justify-content: center;
  align-items: center;
- 
+ padding:50px;
  
  
 }
 /* drink */
-#snow-white>div:nth-child(3) {
+#pinnocchio>div:nth-child(3) {
  grid-column: span 1;
  grid-row: span 1;
  text-align: center;
@@ -907,7 +910,7 @@ font-family:'Playfair Display', cursive;
 
 }
 /* description */
-#snow-white>div:nth-child(4) {
+#pinnocchio>div:nth-child(4) {
  grid-column: span 1;
  grid-row: span 1;
  font-size: 35px;
@@ -917,13 +920,13 @@ font-family:'Playfair Display', cursive;
  }
 
 /* food */
-#snow-white>div:nth-child(5) {
+#pinnocchio>div:nth-child(5) {
  grid-column: span 2;
  text-align: center;
 }
  
 /* } funfact */
-#snow-white>div:nth-child(6) {
+#pinnocchio>div:nth-child(6) {
  
  grid-column: span 1;
  grid-row: span 1;
@@ -932,7 +935,7 @@ font-family:'Playfair Display', cursive;
  font-family:cursive;
 }
 
-#snow-white>div>p {
+#pinnocchio>div>p {
 font-family:'Playfair Display', cursive;
  font-size: 45px;
  padding: 0px;
@@ -971,7 +974,7 @@ font-family:'Playfair Display', cursive;
 #princess-leia>div:nth-child(1) {
  grid-column: span 4;
  justify-items: center;
- font-size: 25px;
+ font-size: 40px;
  font-family:'Bungee', cursive;
 
  
@@ -1021,7 +1024,7 @@ font-family:'Playfair Display', cursive;
 
 #princess-leia>div>p {
   font-family:'Bungee', cursive;
- font-size: 45px;
+ font-size: 55px;
  padding: 0px;
  margin: 10px;
 }

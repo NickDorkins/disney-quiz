@@ -20,7 +20,7 @@ UserInput.prototype.saveToLocalStorage = function () {
 };
 
 // Character constructor
-var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact, maxValue, mimValue) {
+var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact, maxValue, minValue) {
   this.characterName = characterName;
   this.id = id;
   this.characterImage = characterImage;
@@ -33,7 +33,8 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
   this.drinkLink = drinkLink;
   this.funFact = funFact;
   this.maxValue = maxValue;
-  this.mimValue = mimValue;
+  this.minValue = minValue;
+  characterArray.push(this);
 };
 
 //this is whrere we need to put all Character object as well as thier propreties

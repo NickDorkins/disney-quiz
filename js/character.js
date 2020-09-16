@@ -18,7 +18,7 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
 
 //this is whrere we need to put all Character object as well as thier propreties
 new Character(
-  'Captain Hook',
+  'You are...Captain Hook',
   'captain-hook',
   'img/char/capthook.png',
   'img/food/crocgumbo.jpg',
@@ -28,10 +28,10 @@ new Character(
   'You are intellegent and charming. You know what you want and will do anything to get it. Luxery is a necessity. Its important to you that people respect you',
   'https://www.thriftyfoods.com/recipes/recipes/crocodile-gumbo-with-chorizo-prawns-and-beer',
   'http://www.barnotes.co/recipes/crazed-captain-hook',
-  'Captain Hook can play the piano even though he has a hook for a hand'
+  'Captain Hook can play the piano even though he has a hook for a hand.'
 );
 new Character(
-  'Alice',
+  'You are...Alice',
   'alice',
   'img/char/alice.png',
   'img/food/alicecookie.jpg',
@@ -45,7 +45,7 @@ new Character(
 );
 
 new Character(
-  'Hades',
+  'You are...Hades',
   'hades',
   'img/char/hades.png',
   'img/food/greekhero.jpg',
@@ -59,7 +59,7 @@ new Character(
 );
 
 new Character(
-  'Baymax',
+  'You are...Baymax',
   'baymax',
   'img/char/baymax.png',
   'img/food/sloppyjoes.png',
@@ -73,7 +73,7 @@ new Character(
 );
 
 new Character(
-  'Princess Leia',
+  'You are...Princess Leia',
   'princess-leia',
   'img/char/leia.png',
   'img/food/cinnamonbuns.jpg',
@@ -87,7 +87,7 @@ new Character(
 );
 
 new Character(
-  'Boba Fett',
+  'You are...Boba Fett',
   'boba-fett',
   'img/char/bobafett1.png',
   'img/food/bobafettucine.jpg',
@@ -101,7 +101,7 @@ new Character(
 );
 
 new Character(
-  'Ursula',
+  'You are...Ursula',
   'ursula',
   'img/char/ursula.png',
   'img/food/spicyoctopus.jpg',
@@ -115,7 +115,7 @@ new Character(
 );
 
 new Character(
-  'Maleficent',
+  'You are...Maleficent',
   'maleficent',
   'img/char/malifecent.png',
   'img/food/birthdaycake.jpg',
@@ -129,7 +129,7 @@ new Character(
 );
 
 new Character(
-  'Genie',
+  'You are...Genie',
   'genie',
   'img/char/genie.png',
   'img/food/agrabahbites.jpg',
@@ -143,7 +143,7 @@ new Character(
 );
 
 new Character(
-  'Snow White',
+  'You are...Snow White',
   'snow-white',
   'img/char/snowwhite.png',
   'img/food/snowwhitepie.jpg',
@@ -157,7 +157,7 @@ new Character(
 );
 
 new Character(
-  'Pinnocchio',
+  'You are...Pinnocchio',
   'pinnocchio',
   'img/char/pinnocchio.png',
   'img/food/spaghetti.jpg',
