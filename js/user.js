@@ -340,7 +340,6 @@ function chooseCharacter(score) {
   }
 
   return characterId;
- 
 
 }
 
