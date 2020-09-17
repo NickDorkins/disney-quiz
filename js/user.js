@@ -32,8 +32,6 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
   this.foodLink = foodLink;
   this.drinkLink = drinkLink;
   this.funFact = funFact;
-  // this.maxValue = maxValue;
-  // this.minValue = minValue;
   characterArray.push(this);
 };
 
@@ -103,7 +101,7 @@ new Character(
   'princess-leia',
   'img/char/leia.png',
   'img/food/cinnamonbuns.jpg',
-  'img/drink/princess-leia',
+  'img/drink/princess-leia.jpg',
   'Princess Leia Cinnamon Buns',
   'Princess Leia Cocktail',
   'You are sometimes stubborn and sassy but have a great deal of integrity. You like to get things done but you also have a strong sense of teamwork. You are out for the victory of the many rather than personal gain.',
@@ -143,7 +141,7 @@ new Character(
 new Character(
   'You are...Maleficent',
   'maleficent',
-  'img/char/malifecent.png',
+  'img/char/maleficent.png',
   'img/food/birthdaycake.jpg',
   'img/drink/malmelonsour.jpg',
   '16th Birthday Cake',
@@ -160,8 +158,9 @@ new Character(
   'img/char/genie.png',
   'img/food/agrabahbites.jpg',
   'img/drink/bluegenie.jpg',
-  'Agrabah Baklava Bites',
   'Blue Genie',
+  'Agrabah Baklava Bites',
+  
   'You are happy and fun-loving and are rarely seen without a smile. You like to crack jokes and use humor to difuse tense situations. You are creative and outgoing and do NOT like being cooped up.',
   'https://2geekswhoeat.com/agrabah-baklava-bites-aladdin-recipe/',
   'https://unexpectedlygeeky.com/aladdin-inspired-cocktails/',
@@ -187,7 +186,7 @@ new Character(
   'pinnocchio',
   'img/char/pinnocchio.png',
   'img/food/spaghetti.jpg',
-  'img/drink/greengrasshopper',
+  'img/drink/greengrasshopper.jpg',
   'Perfect Spaghetti and Meatballs',
   'Jiminys Conscience',
   'You are whimsical and maybe a little impressionable. You have a mischevious nature and might be considered to be  over-trusting and sometimes end up in trouble. But, you want to be better and try really hard to do the right thing most of the time. You are known for your Big Fish stories.',
@@ -206,7 +205,7 @@ new Character(
 // characterId will find the index in the array that the character lives in
 // example:; captain-hook is index 0
 function renderCharacter() {
-
+  
   // keep track of the index of the character chosen
   // -1 because -1 is not a possible index of an array, so it sets a default value
 
@@ -217,9 +216,11 @@ function renderCharacter() {
   var mainCharacter = document.getElementById('id');
   var characterEl = document.createElement('div');
 
-  var characterScore = localStorage.getItem('score');
+  var characterScore = parseInt(localStorage.getItem('score'));
+  console.log(typeof (characterScore));
   var characterToRender = chooseCharacter(characterScore);
   mainCharacter.setAttribute('id', characterToRender);
+
 
   var characterId = characterToRender;
   console.log(characterToRender);
@@ -343,8 +344,12 @@ function renderCharacter() {
 
 
 // get the total score ofthe user and send it into this function to get the character they are
+
 function chooseCharacter(score) {
+
   var characterId = '';
+
+
   if (score <= 6) {
     characterId = ('alice');
   }
@@ -380,8 +385,10 @@ function chooseCharacter(score) {
   }
 
   return characterId;
+ 
 
 }
+
 // var characterName = chooseCharacter(score);
 
 // set character into Local storage
