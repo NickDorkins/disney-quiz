@@ -35,7 +35,7 @@ var Answer = function (answer, point) {
 // This is where we create our questions
 new QA(
   'When I\'m watching a movie I',
-  [new Answer('<--Choose Option-->', '0'),
+  [new Answer('<--Choose Option-->', 0),
   new Answer('Hope the Hero wins 100%', 1),
   new Answer('Secretly root for the villain', 2),
   new Answer('Cheer when the hero wins but feel bad for the villain...they are just misunderstood', 3),
