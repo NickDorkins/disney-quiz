@@ -1,23 +1,8 @@
 'use strict';
 
-// input array is an array of UserInput and Character instances.
-// var input = [];
 
-// // User input constructor.
-// var UserInput = function (name, age) {
-//   this.name = name;
-//   this.age = age;
-//   input.push(this);
-// };
 
-// // this instance method will add the propreties of the Character constructor to the array input.
-// UserInput.prototype.addInput = function (image, personInfo, food, drink, funFact) {
-//   input.push(new Character(image, personInfo, food, drink, funFact));
-// };
-// UserInput.prototype.saveToLocalStorage = function () {
-//   // this instance method will save all the user info to the local storage
 
-// };
 
 // Character constructor
 var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact) {
@@ -36,7 +21,7 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
 };
 
 
-//this is whrere we need to put all Character object as well as thier propreties
+//this is where we need to put all Character object as well as thier propreties
 var characterArray = [];
 
 
@@ -74,7 +59,6 @@ new Character(
   'img/char/hades.png',
   'img/food/greekhero.jpg',
   'img/drink/hadesunderworldlagoon.jpg',
-  
   'Hades Underworld Lagoon',
   'Greek Hero Sandwich',
   'You are a planner and enjoy strategic encounters.You like things to move at a fast pace. Some might say you are a little sarcastic and cynical but its possible you are just a realist and use humor to express yourself. You also have an anger management problem.',
@@ -91,7 +75,6 @@ new Character(
   'img/drink/baymaxdrink.jpg',
   'The Baymax',
   'Kyoto Sloppy Joes',
-  
   'You are selfless caring and extremely devoted to your friends. You are very curious of your surroundings and tend to get easily distracted. You love to help others and are usually very calm.',
   'https://www.foodrepublic.com/2018/02/12/recipes-japanese-fusion/',
   'https://www.picuki.com/tag/personalhealthcarecompanion',
@@ -106,7 +89,6 @@ new Character(
   'img/drink/princess-leia.jpg',
   'Princess Leia Cocktail',
   'Princess Leia Cinnamon Buns',
-  
   'You are sometimes stubborn and sassy but have a great deal of integrity. You like to get things done but you also have a strong sense of teamwork. You are out for the victory of the many rather than personal gain.',
   'https://www.asdagoodliving.co.uk/food/recipes/princess-leia-cinnamon-buns',
   'https://unsobered.com/featured/5-star-wars-inspired-cocktails-to-get-your-jedi-on/',
@@ -121,8 +103,7 @@ new Character(
   'img/drink/surlysarlac.jpg',
   'Surly Sarlac',
   'Boba Fettucine',
-  
-  'you are utterly professional and never welch on a contract. You never have much to say but you know how to get a job done. Some people think you are a bad guy for being ruthlessbut you think of yourself as goal oriented.',
+  'You are utterly professional and never welch on a contract. You never have much to say but you know how to get a job done. Some people think you are a bad guy for being ruthlessbut you think of yourself as goal oriented.',
   'http://www.apronstringsblog.com/boba-fettucine-with-feta-for-may-the-fourth/',
   'https://www.diznify.com/surly-sarlacc-drink-copycat-recipe/',
   'Boba Fetts helmet gives him 360 degree vision'
@@ -136,7 +117,6 @@ new Character(
   'img/drink/seawitchesbrew.jpg',
   'Sea Witches Brew',
   'Spicy Lemony Grilled Octopus ',
-  
   'You are ambitious and flamboyant. You are very comfortable in your own skin. You have a great sense of humor and are concerned with the love lives of those you meet. You may be a little power-hungry but you also have an appreciation for a great singing voice',
   'http://tchakayiti.com/home/en/',
   'https://www.halloweencostumes.com/blog/p-1351-disney-villains-cocktail-and-mocktail-recipes.aspx',
@@ -151,7 +131,6 @@ new Character(
   'img/drink/malmelonsour.jpg',
   'Deep Sleep Sour Drink',
   '16th Birthday Cake',
-  
   'You are the ultimate Mastermind. You can follow a plan to its completion even if it takes 16 years. You take it personally when you arent invited to parties but realize that maybe its just an oversight and you go anyway. You like to give gifts that last a lifetime.',
   'https://www.deleukstetaartenshop.com/recipe-sweet-16-cake-banoffee-11421',
   'https://www.halloweencostumes.com/blog/p-1351-disney-villains-cocktail-and-mocktail-recipes.aspx',
@@ -166,7 +145,6 @@ new Character(
   'img/drink/bluegenie.jpg',
   'Blue Genie',
   'Agrabah Baklava Bites',
-  
   'You are happy and fun-loving and are rarely seen without a smile. You like to crack jokes and use humor to difuse tense situations. You are creative and outgoing and do NOT like being cooped up.',
   'https://2geekswhoeat.com/agrabah-baklava-bites-aladdin-recipe/',
   'https://unexpectedlygeeky.com/aladdin-inspired-cocktails/',
@@ -181,7 +159,6 @@ new Character(
   'img/drink/snowwhitedrink.jpg',
   'Snow White Chocolate Cocktail',
   'Caramel Apple Crunch Pie',
-  
   'You are assertive but kind and have never lost your sense of child-like wonder. You like to keep things tidy and take care of people. You love animals. You are very trusting. As a hopeless romantic you dream of falling in love some day. ',
   'https://lemonbabydesigns.blogspot.com/2015/03/disney-inspired-dinner-movie-snow-white.html',
   'https://www.inliterature.net/food-in-literature/drinks/alcoholic/2012/05/snow-white-cocktail.html',
@@ -196,7 +173,6 @@ new Character(
   'img/drink/greengrasshopper.jpg',
   'Jiminys Conscience',
   'Perfect Spaghetti and Meatballs',
-  
   'You are whimsical and maybe a little impressionable. You have a mischevious nature and might be considered to be  over-trusting and sometimes end up in trouble. But, you want to be better and try really hard to do the right thing most of the time. You are known for your Big Fish stories.',
   'https://smittenkitchen.com/2019/03/perfect-meatballs-and-spaghetti/',
   'http://yohodisney.com/jiminys-conscience-a-disney-inspired-cocktail/',
@@ -211,16 +187,8 @@ new Character(
 
 // function that will render the Character to the page
 // characterId will find the index in the array that the character lives in
-// example:; captain-hook is index 0
+
 function renderCharacter() {
-  
-  // keep track of the index of the character chosen
-  // -1 because -1 is not a possible index of an array, so it sets a default value
-
-
-  // guarantees we are always working with a valid index in the array/valid character
-  // if (characterIndex >= -1) {
-
   var mainCharacter = document.getElementById('id');
   var characterEl = document.createElement('div');
 
@@ -336,22 +304,6 @@ function renderCharacter() {
 
 }
 
-//this calls the function
-
-// after you calcuate the score,
-// determine who the character is
-// call this function with the characterId as the argument
-// var charAnswerArray = ['alice','snow-white','baymax','pinnocchio','princess-leia','genie','boba-fett','captain-hook','ursula','hades','maleficent'];
-
-
-// // get from localstore the score
-
-
-
-// send that score to choosecharacter
-
-
-// get the total score ofthe user and send it into this function to get the character they are
 
 function chooseCharacter(score) {
 
@@ -397,39 +349,10 @@ function chooseCharacter(score) {
 
 }
 
-// var characterName = chooseCharacter(score);
 
-// set character into Local storage
-//"character":"characterName (variable)"
 
 renderCharacter();
 
-// function handleSubmit(event) {
-//   // prevent the page from reloading
-//   event.preventDefault();
-//   // adding all the info enter by the user
-//   getUserInfo();
-//   UserInput.saveToLocalStorage();
-// }
 
-// function getUserInfo() {
-//   // checked out if thier are over 21 or not
-//   var selectEl = document.getElementById('response');
-
-//   // booleen variable call response: this will return false if the user is under 21
-//   var response = selectEl.checked;
-
-//   // suss out the user Name entered by the user
-//   var userNameEl = document.getElementById('name');
-//   var userName = userNameEl.value;
-//   // generate the user input
-//   var car = new UserInput(userName, response);
-//   console.log(car);
-
-// }
-
-// // this event handeler will make sure that all the user info is being push into the array.
-// var unserinputFom = document.getElementById('userInput');
-// unserinputFom.addEventListener('submit', handleSubmit);
 
 
