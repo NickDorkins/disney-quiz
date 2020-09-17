@@ -1,23 +1,6 @@
 'use strict';
 
-// input array is an array of UserInput and Character instances.
-// var input = [];
 
-// // User input constructor.
-// var UserInput = function (name, age) {
-//   this.name = name;
-//   this.age = age;
-//   input.push(this);
-// };
-
-// // this instance method will add the propreties of the Character constructor to the array input.
-// UserInput.prototype.addInput = function (image, personInfo, food, drink, funFact) {
-//   input.push(new Character(image, personInfo, food, drink, funFact));
-// };
-// UserInput.prototype.saveToLocalStorage = function () {
-//   // this instance method will save all the user info to the local storage
-
-// };
 
 // Character constructor
 var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact) {
@@ -211,15 +194,14 @@ new Character(
 
 // function that will render the Character to the page
 // characterId will find the index in the array that the character lives in
-// example:; captain-hook is index 0
+
 function renderCharacter() {
   
-  // keep track of the index of the character chosen
-  // -1 because -1 is not a possible index of an array, so it sets a default value
+  /
 
 
   // guarantees we are always working with a valid index in the array/valid character
-  // if (characterIndex >= -1) {
+  
 
   var mainCharacter = document.getElementById('id');
   var characterEl = document.createElement('div');
@@ -340,8 +322,8 @@ function renderCharacter() {
 
 // after you calcuate the score,
 // determine who the character is
-// call this function with the characterId as the argument
-// var charAnswerArray = ['alice','snow-white','baymax','pinnocchio','princess-leia','genie','boba-fett','captain-hook','ursula','hades','maleficent'];
+
+
 
 
 // // get from localstore the score
@@ -397,39 +379,12 @@ function chooseCharacter(score) {
 
 }
 
-// var characterName = chooseCharacter(score);
+/
 
 // set character into Local storage
 //"character":"characterName (variable)"
 
 renderCharacter();
 
-// function handleSubmit(event) {
-//   // prevent the page from reloading
-//   event.preventDefault();
-//   // adding all the info enter by the user
-//   getUserInfo();
-//   UserInput.saveToLocalStorage();
-// }
-
-// function getUserInfo() {
-//   // checked out if thier are over 21 or not
-//   var selectEl = document.getElementById('response');
-
-//   // booleen variable call response: this will return false if the user is under 21
-//   var response = selectEl.checked;
-
-//   // suss out the user Name entered by the user
-//   var userNameEl = document.getElementById('name');
-//   var userName = userNameEl.value;
-//   // generate the user input
-//   var car = new UserInput(userName, response);
-//   console.log(car);
-
-// }
-
-// // this event handeler will make sure that all the user info is being push into the array.
-// var unserinputFom = document.getElementById('userInput');
-// unserinputFom.addEventListener('submit', handleSubmit);
 
 

@@ -4,14 +4,7 @@
 body {
   background-color: darkblue;
 }
-/* #page-container {
-  position:relative;
-  min-height: 100vh;
-}
 
-#page-wrap {
-  padding-bottom: 125px;
-} */
 header {
   background-color: white;
   height: 100px;
@@ -80,16 +73,10 @@ header>h1 {
   float: left;
 }
 
-/* .usersignup {
-  float: right;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 16px;
-  color:white;
-  padding:0px;
- display: inline-block;
-} */
+
 
 .intro {
+ 
   display: flex;
   flex-direction: column;
  align-items:center;
@@ -100,13 +87,14 @@ header>h1 {
 .intro>p {
 background-color: white;
 border: solid 3px red;
-font-family: cursive;
+font-family:'Playfair Display', cursive; 
 color: darkslateblue;
-font-size: 21px;
+font-size: 35px;
+text-align:center;
 float:right;
 margin-top:200px;
-margin-right: 300px;
-width: 300px;
+margin-right: 200px;
+width: 500px;
 padding: 20px;
 
 
@@ -115,7 +103,7 @@ order: 1;
 
 .intro>a>img {
  margin-top: 175px;
- margin-right: 300px;
+ margin-right: 200px;
  padding:0px;
  
  order: 2;
@@ -157,11 +145,6 @@ order: 1;
   
 }
 
-/* #footer {
-  position: fixed;
-  background-color: darkgreen;
-  height: 75px;
-  width: 100%;
-  bottom: 0;
-  
-} */
+
+
+
