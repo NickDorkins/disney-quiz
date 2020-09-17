@@ -1,26 +1,26 @@
 'use strict';
 
 // input array is an array of UserInput and Character instances.
-var input = [];
+// var input = [];
 
-// User input constructor.
-var UserInput = function (name, age) {
-  this.name = name;
-  this.age = age;
-  input.push(this);
-};
+// // User input constructor.
+// var UserInput = function (name, age) {
+//   this.name = name;
+//   this.age = age;
+//   input.push(this);
+// };
 
-// this instance method will add the propreties of the Character constructor to the array input.
-UserInput.prototype.addInput = function (image, personInfo, food, drink, funFact) {
-  input.push(new Character(image, personInfo, food, drink, funFact));
-};
-UserInput.prototype.saveToLocalStorage = function () {
-  // this instance method will save all the user info to the local storage
+// // this instance method will add the propreties of the Character constructor to the array input.
+// UserInput.prototype.addInput = function (image, personInfo, food, drink, funFact) {
+//   input.push(new Character(image, personInfo, food, drink, funFact));
+// };
+// UserInput.prototype.saveToLocalStorage = function () {
+//   // this instance method will save all the user info to the local storage
 
-};
+// };
 
 // Character constructor
-var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact, maxValue, minValue) {
+var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact) {
   this.characterName = characterName;
   this.id = id;
   this.characterImage = characterImage;
@@ -32,8 +32,8 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
   this.foodLink = foodLink;
   this.drinkLink = drinkLink;
   this.funFact = funFact;
-  this.maxValue = maxValue;
-  this.minValue = minValue;
+  // this.maxValue = maxValue;
+  // this.minValue = minValue;
   characterArray.push(this);
 };
 
@@ -41,7 +41,8 @@ var Character = function (characterName, id, characterImage, foodImage, drinkIma
 //this is whrere we need to put all Character object as well as thier propreties
 var characterArray = [];
 
-//this is whrere we need to put all Character object as well as thier propreties
+
+
 new Character(
   'You are...Captain Hook',
   'captain-hook',
@@ -201,17 +202,30 @@ new Character(
 
 
 
-
 // function that will render the Character to the page
 // characterId will find the index in the array that the character lives in
 // example:; captain-hook is index 0
-function renderCharacter(characterId) {
+function renderCharacter() {
 
   // keep track of the index of the character chosen
   // -1 because -1 is not a possible index of an array, so it sets a default value
-  var characterIndex = -1;
 
-  // going through the array and 
+
+  // guarantees we are always working with a valid index in the array/valid character
+  // if (characterIndex >= -1) {
+
+  var mainCharacter = document.getElementById('id');
+  var characterEl = document.createElement('div');
+
+  var characterScore = localStorage.getItem('score');
+  var characterToRender = chooseCharacter(characterScore);
+  mainCharacter.setAttribute('id', characterToRender);
+
+  var characterId = characterToRender;
+  console.log(characterToRender);
+  var characterIndex = 0;
+
+  // going through the array and
   for (var i = 0; i < characterArray.length; i++) {
     // seeing if the id of the character obj in the array is equal to the id that the function is accepting.
     if (characterArray[i].id === characterId) {
@@ -221,138 +235,186 @@ function renderCharacter(characterId) {
     }
   }
 
-  // guarantees we are always working with a valid index in the array/valid character
-  if (characterIndex >= 0) {
-
-    var mainCharacter = document.getElementById('id');
-    var characterEl = document.createElement('div');
-
-    var h1Name = document.createElement('div');
-    characterEl.id = characterArray[characterIndex].id;
-    // populate the character name onto the main id
-    var characterH1 = document.createElement('h1');
-    characterH1.textContent = characterArray[characterIndex].characterName;
-    h1Name.appendChild(characterH1);
-    characterEl.appendChild(h1Name);
+  var h1Name = document.createElement('div');
+  characterEl.id = characterArray[characterIndex].id;
+  // populate the character name onto the main id
+  var characterH1 = document.createElement('h1');
+  characterH1.textContent = characterArray[characterIndex].characterName;
+  h1Name.appendChild(characterH1);
+  characterEl.appendChild(h1Name);
 
 
-    var imgDiv = document.createElement('div');
-    var characterImg = document.createElement('img');
-    characterImg.src = characterArray[characterIndex].characterImage;
-    imgDiv.appendChild(characterImg);
-    characterEl.appendChild(imgDiv);
+  var imgDiv = document.createElement('div');
+  var characterImg = document.createElement('img');
+  characterImg.src = characterArray[characterIndex].characterImage;
+  imgDiv.appendChild(characterImg);
+  characterEl.appendChild(imgDiv);
 
 
-    var drinkDivs = document.createElement('div');
+  var drinkDivs = document.createElement('div');
 
-    var spanText = document.createElement('span');
-    spanText.textContent = 'Suggested Drink';
+  var spanText = document.createElement('span');
+  spanText.textContent = 'Suggested Drink';
 
-    drinkDivs.appendChild(spanText);
+  drinkDivs.appendChild(spanText);
 
-    var characterDrinkImg = document.createElement('img');
-    characterDrinkImg.src = characterArray[characterIndex].drinkImage;
+  var characterDrinkImg = document.createElement('img');
+  characterDrinkImg.src = characterArray[characterIndex].drinkImage;
 
-    drinkDivs.appendChild(characterDrinkImg);
-
-
-    var drinkNameP = document.createElement('p');
-    drinkNameP.textContent = characterArray[characterIndex].drinkName;
+  drinkDivs.appendChild(characterDrinkImg);
 
 
-    var characterDrinkLink = document.createElement('a');
-    characterDrinkLink.href = characterArray[characterIndex].drinkLink;
-    characterDrinkLink.appendChild(drinkNameP);
+  var drinkNameP = document.createElement('p');
+  drinkNameP.textContent = characterArray[characterIndex].drinkName;
 
 
-    drinkDivs.appendChild(characterDrinkLink);
+  var characterDrinkLink = document.createElement('a');
+  characterDrinkLink.href = characterArray[characterIndex].drinkLink;
+  characterDrinkLink.appendChild(drinkNameP);
 
-    characterEl.appendChild(drinkDivs);
+
+  drinkDivs.appendChild(characterDrinkLink);
+
+  characterEl.appendChild(drinkDivs);
 
 
 
 
-    var descDiv = document.createElement('div');
-    var characterArticle = document.createElement('article');
-    characterArticle.textContent = characterArray[characterIndex].description;
-    descDiv.appendChild(characterArticle);
-    characterEl.appendChild(descDiv);
+  var descDiv = document.createElement('div');
+  var characterArticle = document.createElement('article');
+  characterArticle.textContent = characterArray[characterIndex].description;
+  descDiv.appendChild(characterArticle);
+  characterEl.appendChild(descDiv);
 
 
 
-    var foodDiv = document.createElement('div');
+  var foodDiv = document.createElement('div');
 
-    var foodSpan = document.createElement('p');
-    foodSpan.textContent = 'Suggested Food';
-    foodDiv.appendChild(foodSpan);
+  var foodSpan = document.createElement('p');
+  foodSpan.textContent = 'Suggested Food';
+  foodDiv.appendChild(foodSpan);
 
-    var characterFoodImg = document.createElement('img');
-    characterFoodImg.src = characterArray[characterIndex].foodImage;
+  var characterFoodImg = document.createElement('img');
+  characterFoodImg.src = characterArray[characterIndex].foodImage;
 
-    foodDiv.appendChild(characterFoodImg);
+  foodDiv.appendChild(characterFoodImg);
 
-    var foodNameP = document.createElement('p');
-    foodNameP.textContent = characterArray[characterIndex].foodName;
+  var foodNameP = document.createElement('p');
+  foodNameP.textContent = characterArray[characterIndex].foodName;
 
-    var characterFoodLink = document.createElement('a');
-    characterFoodLink.href = characterArray[characterIndex].foodLink;
-    characterFoodLink.appendChild(foodNameP);
-    foodDiv.appendChild(characterFoodLink);
-    characterEl.appendChild(foodDiv);
-
-
-    var funDiv = document.createElement('div');
-    var funPara = document.createElement('p');
-    funPara.textContent = 'Fun Fact';
-    funDiv.appendChild(funPara);
+  var characterFoodLink = document.createElement('a');
+  characterFoodLink.href = characterArray[characterIndex].foodLink;
+  characterFoodLink.appendChild(foodNameP);
+  foodDiv.appendChild(characterFoodLink);
+  characterEl.appendChild(foodDiv);
 
 
-    var funFact = document.createElement('span');
-    funFact.textContent = characterArray[characterIndex].funFact;
-    funDiv.appendChild(funFact);
+  var funDiv = document.createElement('div');
+  var funPara = document.createElement('p');
+  funPara.textContent = 'Fun Fact';
+  funDiv.appendChild(funPara);
 
-    characterEl.appendChild(funDiv);
 
-    mainCharacter.appendChild(characterEl);
+  var funFact = document.createElement('span');
+  funFact.textContent = characterArray[characterIndex].funFact;
+  funDiv.appendChild(funFact);
 
-  }else {
-    // do some sort of You don't have a character probably a a stretch goal though
-  }
+  characterEl.appendChild(funDiv);
+
+  mainCharacter.appendChild(characterEl);
+
+
+
 }
 
 //this calls the function
 
-// after you calcuate the score, 
+// after you calcuate the score,
 // determine who the character is
 // call this function with the characterId as the argument
-renderCharacter('captain-hook');
+// var charAnswerArray = ['alice','snow-white','baymax','pinnocchio','princess-leia','genie','boba-fett','captain-hook','ursula','hades','maleficent'];
 
-function handleSubmit(event) {
-  // prevent the page from reloading
-  event.preventDefault();
-  // adding all the info enter by the user
-  getUserInfo();
-  UserInput.saveToLocalStorage();
+
+// // get from localstore the score
+
+
+
+// send that score to choosecharacter
+
+
+// get the total score ofthe user and send it into this function to get the character they are
+function chooseCharacter(score) {
+  var characterId = '';
+  if (score <= 6) {
+    characterId = ('alice');
+  }
+  else if (score === 7 || score === 8) {
+    characterId = ('snow-white');
+  }
+  else if (score === 9 || score === 10) {
+    characterId = ('baymax');
+  }
+  else if (score === 11 || score === 12) {
+    characterId = ('pinnocchio');
+  }
+  else if (score === 13 || score === 14) {
+    characterId = ('princess-leia');
+  }
+  else if (score === 15 || score === 16) {
+    characterId = ('genie');
+  }
+  else if (score === 17 || score === 18) {
+    characterId = ('boba-fett');
+  }
+  else if (score === 19 || score === 20) {
+    characterId = ('captain-hook');
+  }
+  else if (score === 21 || score === 22) {
+    characterId = ('ursula');
+  }
+  else if (score === 23 || score === 24) {
+    characterId = ('hades');
+  }
+  else if (score === 25) {
+    characterId = ('maleficent');
+  }
+
+  return characterId;
+
 }
+// var characterName = chooseCharacter(score);
 
-function getUserInfo() {
-  // checked out if thier are over 21 or not
-  var selectEl = document.getElementById('response');
+// set character into Local storage
+//"character":"characterName (variable)"
 
-  // booleen variable call response: this will return false if the user is under 21
-  var response = selectEl.checked;
+renderCharacter();
 
-  // suss out the user Name entered by the user
-  var userNameEl = document.getElementById('name');
-  var userName = userNameEl.value;
-  // generate the user input
-  var car = new UserInput(userName, response);
-  console.log(car);
+// function handleSubmit(event) {
+//   // prevent the page from reloading
+//   event.preventDefault();
+//   // adding all the info enter by the user
+//   getUserInfo();
+//   UserInput.saveToLocalStorage();
+// }
 
-}
+// function getUserInfo() {
+//   // checked out if thier are over 21 or not
+//   var selectEl = document.getElementById('response');
 
-// this event handeler will make sure that all the user info is being push into the array.
-var unserinputFom = document.getElementById('userInput');
-unserinputFom.addEventListener('submit', handleSubmit);
+//   // booleen variable call response: this will return false if the user is under 21
+//   var response = selectEl.checked;
+
+//   // suss out the user Name entered by the user
+//   var userNameEl = document.getElementById('name');
+//   var userName = userNameEl.value;
+//   // generate the user input
+//   var car = new UserInput(userName, response);
+//   console.log(car);
+
+// }
+
+// // this event handeler will make sure that all the user info is being push into the array.
+// var unserinputFom = document.getElementById('userInput');
+// unserinputFom.addEventListener('submit', handleSubmit);
 
 

@@ -79,19 +79,21 @@ header>h1 {
   float: left;
 }
 
-.usersignup {
+/* .usersignup {
   float: right;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
   color:white;
   padding:0px;
  display: inline-block;
-}
+} */
 
 .intro {
   display: flex;
   flex-direction: column;
  align-items:center;
+ float: right;
+
  
 }
 .intro>p {
@@ -102,7 +104,7 @@ color: darkslateblue;
 font-size: 21px;
 float:right;
 margin-top:200px;
-margin-right: -400px;
+margin-right: 300px;
 width: 300px;
 padding: 20px;
 
@@ -111,9 +113,10 @@ order: 1;
 }
 
 .intro>a>img {
- /* margin-top: 175px;
- margin-left: 300px;
- padding:0px; */
+ margin-top: 175px;
+ margin-right: 300px;
+ padding:0px;
+ 
  order: 2;
 
 
@@ -132,11 +135,19 @@ order: 1;
 
 }
 
-#footer {
+#mickeyhand {
+  float: right;
+  color:white;
+  font-size: 25px;
+  font-family:'Playfair Display', cursive;
+  
+}
+
+/* #footer {
   position: fixed;
   background-color: darkgreen;
   height: 75px;
   width: 100%;
   bottom: 0;
   
-}
+} */
