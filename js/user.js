@@ -1,9 +1,5 @@
 'use strict';
 
-
-
-
-
 // Character constructor
 var Character = function (characterName, id, characterImage, foodImage, drinkImage, drinkName, foodName, description, foodLink, drinkLink, funFact) {
   this.characterName = characterName;
@@ -304,7 +300,6 @@ function renderCharacter() {
 
 }
 
-
 function chooseCharacter(score) {
 
   var characterId = '';
@@ -349,10 +344,4 @@ function chooseCharacter(score) {
 
 }
 
-
-
 renderCharacter();
-
-
-
-
