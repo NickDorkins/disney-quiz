@@ -53,10 +53,7 @@ header>h1 {
 
 /* alice */
 
- #alice  {
-   background-color:pink;
-   
- }
+
  
  
  
@@ -73,13 +70,15 @@ header>h1 {
   color: blue;
   padding: 10px;
   background:white;
-  font-size: 20px;
+  font-size: 35px;
   justify-self: center;
   border: solid 3px orchid;
   font-family: 'Cookie', cursive;
+ 
 }
 /* name */
 #alice>div:nth-child(1) {
+  background-color:pink;
   grid-column: span 4;
   justify-items: center;
   font-size: 30px;
@@ -100,8 +99,8 @@ header>h1 {
   grid-column: span 1;
   grid-row: span 1;
   text-align: center;
-  font-size: 25px;
-  width:100%;
+  font-size: 35px;
+  
  }
 
 
@@ -139,12 +138,19 @@ header>h1 {
   margin: 10px;
 }
 
-/* Captain Hook */
-  
-#captain-hook {
-  background-color:lightblue;
+#alice>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+#alice>div>span {
+  display: block;
+}
+
+/* Captain Hook */
+  
+
 
 #captain-hook {
  display: grid;
@@ -166,6 +172,7 @@ header>h1 {
 }
 /* name */
 #captain-hook>div:nth-child(1) {
+  background-color:lightblue;
  grid-column: span 4;
  justify-items: center;
  font-size: 25px;
@@ -237,12 +244,15 @@ header>h1 {
 
 }
 
-/* Genie */
-
-#genie {
-  background-color:green;
+#captain-hook>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+/* Genie */
+
+
 
 #genie {
  display: grid;
@@ -265,6 +275,7 @@ header>h1 {
 
 /* name */
 #genie>div:nth-child(1) {
+  background-color: green;
  grid-column: span 4;
  justify-items: center;
  font-size: 25px;
@@ -325,12 +336,15 @@ header>h1 {
  margin: 10px;
 }
 
+#genie>div>h1 {
+  background-color: white;
+  font-size: 45px;
+
+}
+
 /*  Ursula*/
 
-#ursula {
-  background-color:green;
-  
-}
+
 
 
 
@@ -356,6 +370,8 @@ header>h1 {
 /* name */
 #ursula>div:nth-child(1) {
  grid-column: span 4;
+ background-color:green;
+
  justify-items: center;
  font-size: 25px;
  font-family:'Charm', cursive;
@@ -412,13 +428,16 @@ header>h1 {
  margin: 10px;
 }
 
+#ursula>div>h1 {
+  background-color: white;
+  font-size: 45px;
+  
+}
+
 
 /* baymax */
 
-#baymax {
-  background-color:red;
-  
-}
+
 
 
 
@@ -443,6 +462,7 @@ header>h1 {
 
 /* name */
 #baymax>div:nth-child(1) {
+  background-color:red;
  grid-column: span 4;
  justify-items: center;
  font-size: 45px;
@@ -500,11 +520,14 @@ header>h1 {
  margin: 10px;
 }
 
-/* boba-fett */
- #boba-fett {
-  background-color:darkolivegreen;
+#baymax>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+/* boba-fett */
+ 
 
 
 
@@ -529,6 +552,7 @@ header>h1 {
 
 /* name */
 #boba-fett>div:nth-child(1) {
+  background-color:darkolivegreen;
  grid-column: span 4;
  justify-items: center;
  margin-top:10px;
@@ -564,6 +588,8 @@ header>h1 {
  
  }
 
+ 
+
 /* food */
 #boba-fett>div:nth-child(5) {
  grid-column: span 2;
@@ -587,11 +613,14 @@ header>h1 {
  margin: 10px;
 }
 
-/* hades */
-#hades {
-  background-color: black;
+#boba-fett>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+/* hades */
+
 
 
 
@@ -616,6 +645,7 @@ header>h1 {
 
 /* name */
 #hades>div:nth-child(1) {
+  background-color: black;
  grid-column: span 4;
  justify-items: center;
  font-size: 40px;
@@ -673,11 +703,14 @@ header>h1 {
  margin: 10px;
 }
 
-/* maleficent */
- #maleficent  {
-  background-color:rgb(48, 25, 58);
+#hades>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+/* maleficent */
+ 
 
 
 
@@ -702,6 +735,7 @@ header>h1 {
 
 /* name */
  #maleficent>div:nth-child(1) {
+  background-color:rgb(48, 25, 58);
  grid-column: span 4;
  justify-items: center;
  font-size: 40px;
@@ -760,12 +794,15 @@ font-family:'Rakkas', cursive;
  margin: 10px;
 }
 
-/* snow-white */
-
-#snow-white {
-  background-color:lightblue;
+#maleficent>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+/* snow-white */
+
+
 
 
 
@@ -790,6 +827,7 @@ font-family:'Rakkas', cursive;
 
 /* name */
 #snow-white>div:nth-child(1) {
+  background-color:lightblue;
  grid-column: span 4;
  justify-items: center;
  font-size: 40px;
@@ -847,12 +885,15 @@ font-family:'Playfair Display', cursive;
  margin: 10px;
 }
 
-
-/* pinnocchio */
-#pinnocchio {
-  background-color:darkblue;
+#snow-white>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+
+/* pinnocchio */
+
 
 
 
@@ -877,6 +918,7 @@ font-family:'Playfair Display', cursive;
 
 /* name */
 #pinnocchio>div:nth-child(1) {
+  background-color:darkblue;
  grid-column: span 4;
  justify-items: center;
  font-size: 40px;
@@ -934,12 +976,14 @@ font-family:'Playfair Display', cursive;
  margin: 10px;
 }
 
-/* princess-leia */
-
-#princess-leia {
-  background-color:rgb(51, 51, 146);
+#pinnocchio>div>h1 {
+  background-color: white;
+  font-size: 45px;
   
 }
+
+/* princess-leia */
+
 
 
 
@@ -964,6 +1008,7 @@ font-family:'Playfair Display', cursive;
 
 /* name */
 #princess-leia>div:nth-child(1) {
+  background-color:rgb(51, 51, 146);
  grid-column: span 4;
  justify-items: center;
  font-size: 40px;
@@ -1019,4 +1064,10 @@ font-family:'Playfair Display', cursive;
  font-size: 55px;
  padding: 0px;
  margin: 10px;
+}
+
+#princess-leia>div>h1 {
+  background-color: white;
+  font-size: 45px;
+  
 }

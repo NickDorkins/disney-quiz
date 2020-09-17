@@ -117,18 +117,20 @@ function addSelectedAnswer() {
       }
     }
   }
+// add a new item to localstorage with th key of "score" value ## (count)
+  localStorage.setItem('score', count);
+  console.log(count);
 
 }
-// add a new item to localstorage with th key of "score" value ## (count)
-localStorage.setItem('score', count);
 
-console.log(count);
+
 
 
 // Creating a function for the submit button
 function handleSubmit(event) {
-  window.localStorage.clear();
+  
   event.preventDefault();
+  // window.localStorage.clear();
   addSelectedAnswer();
 
 }
