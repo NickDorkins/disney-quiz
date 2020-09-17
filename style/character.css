@@ -17,7 +17,7 @@
   left: 20px;
 }
 
-.playAgain>button {
+/* .playAgain>button {
   background-color: darkblue;
   height: 75px;
   width: 125px;
@@ -28,7 +28,7 @@
   font-size: 12px;
   cursor: pointer;
   border-radius: 50%;
-}
+} */
 
 header {
   background-color: white;
